@@ -7,7 +7,7 @@ document.getElementById('close').addEventListener('click', function() {
 });
 
 var products = [
-    {id: "product1", image: "https://github.com/aarnav1729/frmmerch/blob/main/product_1.jpg", name: "Product 1", description: "Product 1 Description", price: "$99.99"},
+    {id: "product1", image: "product_1.jpg", name: "Product 1", description: "Product 1 Description", price: "$99.99"},
     {id: "product2", image: "product_2.jpg", name: "Product 2", description: "Product 2 Description", price: "$99.99"},
     {id: "product3", image: "product_3.jpg", name: "Product 3", description: "Product 3 Description", price: "$99.99"},
     {id: "product4", image: "product_4.jpg", name: "Product 4", description: "Product 4 Description", price: "$99.99"},
@@ -37,7 +37,22 @@ function getProductInfo(productId) {
     return product;
 }
 
+function increaseQuantity() {
+    var quantityElement = document.getElementById('product-quantity');
+    var quantity = parseInt(quantityElement.textContent);
+    quantityElement.textContent = quantity + 1;
+}
+
+function decreaseQuantity() {
+    var quantityElement = document.getElementById('product-quantity');
+    var quantity = parseInt(quantityElement.textContent);
+    if (quantity > 1) {
+        quantityElement.textContent = quantity - 1;
+    }
+}
+
 window.onload = function () {
+    document.getElementById('product-image').classList.add('loaded');  // Remove the 'loaded' class
     var productId = getProductIdFromUrl();
     var productInfo = getProductInfo(productId);
 
@@ -48,9 +63,12 @@ window.onload = function () {
     if (productInfo) {
         console.log("Setting image source:", productInfo.image);  // Check the image source
         document.getElementById('product-image').src = productInfo.image;
+        document.getElementById('product-image').classList.add('loaded');  // Add the 'loaded' class
         document.getElementById('product-name').textContent = productInfo.name;
         document.getElementById('product-description').textContent = productInfo.description;
         document.getElementById('product-price').textContent = productInfo.price;
+
+
     } else {
         // Handle case where product info is not found
         document.getElementById('product-container').textContent = 'Product not found';
