@@ -18,6 +18,11 @@ html {
 header, footer {
     font-weight:400;
 }
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 .absolute {
     font-family: 'United Kingdom', sans-serif;
@@ -176,10 +181,48 @@ button[type="submit"] {
     opacity: 1;
 }
 
+#product-container {
+    flex-grow: 1;
+}
+
 #product-image {
     width: 100%;
     max-width: calc(50% - 20px);
     height: auto;
+}
+
+/* Mobile styles */
+#product-container {
+    flex-direction: column;
+}
+
+.product-info {
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    #product-container {
+        flex-direction: row;
+    }
+
+    .product-info {
+        margin-left: 10px;
+        margin-top: 0;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    #product-container {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    .product-info {
+        margin-left: 20px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -203,5 +246,69 @@ button[type="submit"] {
 @media (max-width: 640px) {
     footer .container {
         flex-direction: column;
+    }
+}
+
+/* Mobile styles */
+#product-container {
+    flex-direction: column;
+}
+
+#product-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#product-name {
+    font-size: 1.5rem;
+}
+
+#product-price {
+    font-size: 1.2rem;
+}
+
+#product-description {
+    font-size: 1rem;
+}
+
+/* Tablet and Desktop styles */
+@media (min-width: 768px) {
+    #product-container {
+        flex-direction: row;
+    }
+
+    .product-info {
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 0;
+    }
+
+    #product-name {
+        font-size: 2rem;
+    }
+
+    #product-price {
+        font-size: 1.5rem;
+    }
+
+    #product-description {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile and Tablet styles */
+.absolute {
+    font-size: 7vw;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .absolute {
+        font-size: 7rem;
     }
 }

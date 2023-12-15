@@ -37,7 +37,7 @@
 
     </nav>
     <div class="flex justify-center items-center min-h-screen">
-        <div id="product-container mx auto" class="flex flex-col md:flex-row items-center justify-center p-10 bg-white rounded-lg max-w-4xl mx-auto">
+        <div id="product-container mx auto" class="flex flex-col md:flex-row items-center justify-center p-10 rounded mx-auto">
 
             <img id="product-image" src="" alt="Product Image" class="w-full md:w-1/2 object-cover rounded-lg">
             <div class="product-info flex flex-col items-start ml-0 md:ml-10 mt-10 md:mt-0">
@@ -45,20 +45,19 @@
                 <p id="product-price" class="text-2xl font-bold mb-2"></p>
                 <h2 id="product-name" class="text-4xl font-bold mb-2"></h2>
                 <p id="product-description" class="text-lg mb-8"></p>
-
                 <div class="size-selection flex justify-center mb-8">
-                    <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">S</button>
-                    <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">M</button>
-                    <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">L</button>
-                    <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">XL</button>
-                    <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">XXL</button>
+                    <button class="bg-gray-800 hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">S</button>
+                    <button class="bg-gray-800 hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">M</button>
+                    <button class="bg-gray-800 hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">L</button>
+                    <button class="bg-gray-800 hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">XL</button>
+                    <button class="bg-gray-800 hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">XXL</button>
                 </div>
 
                 <div class="quantity-control flex items-center mb-8">
                     <button onclick="decreaseQuantity()" class="bg-gray-800 hover:bg-red-600 text-white font-bold rounded border-none px-4 py-2 mx-2 cursor-pointer">-</button>
                     <span id="product-quantity" class="text-lg mx-2">1</span>
                     <button onclick="increaseQuantity()" class="bg-gray-800 hover:bg-green-600 text-white font-bold rounded border-none px-4 py-2 mx-2 cursor-pointer">+</button>
-                    <button onclick="addToCart()" class="bg-green-500 hover:bg-green-600 text-white font-bold border-none px-4 py-2 mx-2 cursor-pointer">Add to cart</button>
+                    <button onclick="addToCart()" class="bg-blue-800 border-none hover:bg-gray-800 px-4 py-2 mx-2 cursor-pointer rounded">🛒</button>
                 </div>
 
             </div>
