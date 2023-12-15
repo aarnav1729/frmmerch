@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>frmmerch</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-100">
+
+    <header class="flex justify-between items-center p-6 bg-white shadow-md">
+        <div id="menu" class="cursor-pointer text-2xl text-gray-700">☰</div>
+
+        <div id="logo"><img src="logo1.jpg" alt="Logo" class="h-16"></div>
+
+        <div id="cart" class="cursor-pointer text-2xl text-gray-700">🛒</div>
+    </header>
+
+    <nav id="navigation" class="fixed top-0 left-0 h-full w-64 bg-white shadow-md transform -translate-x-full transition-transform duration-200 ease-in-out">
+        <div id="close" class="cursor-pointer text-2xl text-gray-700 p-6">✖</div>
+        <ul class="flex flex-col p-6 space-y-2">
+            <li><a href="index.html">home</a></li>
+            <li><a href="shop.html">shop</a></li>
+            <li><a href="fashion.html">vision</a></li>
+            <li><a href="shipping.html">shipping</a></li>
+            <li><a href="sizing.html">sizing</a></li>
+            <li><a href="more.html" class="active">more</a></li>
+            <li><a href="reviews.html">reviews</a></li>
+        </ul>
+    </nav>
+
+    <h1>frmmerch is currently wokring on the more page</h1>
+
+    <script src="main.js"></script>
+
+    <footer class="bg-gray-800 text-white p-6">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between">
+            <div>
+                <h3 class="text-lg">follow us</h3>
+                <ul class="flex space-x-4 mt-2">
+                    <li><a href="#"><i class="fab fa-facebook fa-lg"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
+                    <!-- Add more social media links as needed -->
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg">newsletter</h3>
+                <form class="mt-2">
+                    <input type="email" placeholder="Your email" class="p-2 rounded">
+                    <button type="submit" class="p-2 rounded bg-blue-500 text-white">subscribe</button>
+                </form>
+            </div>
+            <div>
+                <h3 class="text-lg">contact us</h3>
+                <p class="mt-2">1282 concordia ave</p>
+                <p>(678) 770-0596</p>
+                <p>info@frmmerch.com</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
