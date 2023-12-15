@@ -24,6 +24,7 @@
 
     <nav id="navigation" class="fixed top-0 left-0 h-full w-64 bg-white shadow-md transform -translate-x-full transition-transform duration-200 ease-in-out">
         <div id="close" class="cursor-pointer text-2xl text-gray-700 p-6">✖</div>
+        
         <ul class="flex flex-col p-6 space-y-2">
             <li><a href="index.html" class="text-gray-700 hover\:text-blue-500 transition-colors duration-200">home</a></li>
             <li><a href="shop.html" class="text-gray-700 hover\:text-blue-500 transition-colors duration-200">shop</a></li>
@@ -33,32 +34,41 @@
             <li><a href="more.html" class="text-gray-700 hover\:text-blue-500 transition-colors duration-200">more</a></li>
             <li><a href="reviews.html" class="text-gray-700 hover\:text-blue-500 transition-colors duration-200">reviews</a></li>
         </ul>
-    </nav>
 
-    <div id="product-container" class="flex flex-col md:flex-row items-start justify-center p-10 bg-white rounded-lg shadow-lg max-w-4xl mx-auto mt-10">
-        <img id="product-image" src="" alt="Product Image" class="w-full md:w-1/2 object-cover rounded-lg">
-        <div class="product-info flex flex-col items-start ml-0 md:ml-10 mt-10 md:mt-0">
-            <p id="product-price" class="text-2xl font-bold mb-2"></p>
-            <h2 id="product-name" class="text-4xl font-bold mb-2"></h2>
-            <p id="product-description" class="text-lg mb-8"></p>
-            <div class="size-selection flex justify-center mb-8">
-                <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">S</button>
-                <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">M</button>
-                <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">L</button>
-                <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">XL</button>
-                <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">XXL</button>
-            </div>
-            <div class="quantity-control flex items-center mb-8">
-                <button onclick="decreaseQuantity()" class="bg-gray-800 hover:bg-red-600 text-white font-bold rounded border-none px-4 py-2 mx-2 cursor-pointer">-</button>
-                <span id="product-quantity" class="text-lg mx-2">1</span>
-                <button onclick="increaseQuantity()" class="bg-gray-800 hover:bg-green-600 text-white font-bold rounded border-none px-4 py-2 mx-2 cursor-pointer">+</button>
-                <button onclick="addToCart()" class="bg-green-500 hover:bg-green-600 text-white font-bold border-none px-4 py-2 mx-2 cursor-pointer">Add to cart</button>
+    </nav>
+    <div class="flex justify-center items-center min-h-screen">
+        <div id="product-container mx auto" class="flex flex-col md:flex-row items-start justify-center p-10 bg-white rounded-lg shadow-lg max-w-4xl mx-auto">
+
+            <img id="product-image" src="" alt="Product Image" class="w-full md:w-1/2 object-cover rounded-lg">
+            <div class="product-info flex flex-col items-start ml-0 md:ml-10 mt-10 md:mt-0">
+
+                <p id="product-price" class="text-2xl font-bold mb-2"></p>
+                <h2 id="product-name" class="text-4xl font-bold mb-2"></h2>
+                <p id="product-description" class="text-lg mb-8"></p>
+
+                <div class="size-selection flex justify-center mb-8">
+                    <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">S</button>
+                    <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">M</button>
+                    <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">L</button>
+                    <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">XL</button>
+                    <button class="hover:bg-blue-800 text-white rounded border-none px-4 py-2 mx-2 cursor-pointer">XXL</button>
+                </div>
+
+                <div class="quantity-control flex items-center mb-8">
+                    <button onclick="decreaseQuantity()" class="bg-gray-800 hover:bg-red-600 text-white font-bold rounded border-none px-4 py-2 mx-2 cursor-pointer">-</button>
+                    <span id="product-quantity" class="text-lg mx-2">1</span>
+                    <button onclick="increaseQuantity()" class="bg-gray-800 hover:bg-green-600 text-white font-bold rounded border-none px-4 py-2 mx-2 cursor-pointer">+</button>
+                    <button onclick="addToCart()" class="bg-green-500 hover:bg-green-600 text-white font-bold border-none px-4 py-2 mx-2 cursor-pointer">Add to cart</button>
+                </div>
+
             </div>
         </div>
     </div>
 
     <footer class="bg-gray-800 text-white p-6">
+        
         <div class="container mx-auto flex flex-col md:flex-row justify-between">
+            
             <div>
                 <h3 class="text-lg">follow us</h3>
                 <ul class="flex space-x-4 mt-2">
@@ -67,6 +77,7 @@
                     <li><a href="https://www.instagram.com/frmmerch/?hl=en"><i class="fab fa-instagram fa-lg"></i></a></li>
                 </ul>
             </div>
+
             <div>
                 <h3 class="text-lg">newsletter</h3>
                 <form class="mt-2">
@@ -76,12 +87,14 @@
                     </button>
                 </form>
             </div>
+
             <div>
                 <h3 class="text-lg">contact us</h3>
                 <p class="mt-2">1282 concordia ave</p>
                 <p>(678) 770-0596</p>
                 <p>info@frmmerch.com</p>
             </div>
+            
         </div>
     </footer>
 
