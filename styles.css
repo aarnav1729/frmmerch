@@ -24,6 +24,7 @@ body {
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: auto;
@@ -65,6 +66,20 @@ body.open #navigation {
 .active {
     color: #ff6347; 
     font-weight: bold;
+}
+
+input[type="email"] {
+    padding: 0.5em 2em;
+}
+
+input[type="email"]:focus {
+    outline: dotted 1px #475cff;
+    background-color: black;
+}
+
+button[type="submit"] {
+    background: none;
+    border: none;
 }
 
 @media (max-width: 640px) {
