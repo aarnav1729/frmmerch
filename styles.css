@@ -82,6 +82,24 @@ button[type="submit"] {
     border: none;
 }
 
+#product-image {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+body.onload #product-image {
+    opacity: 1;
+}
+
+#product-image {
+    opacity: 0;
+    transition: opacity 2s;
+}
+
+body.onload #product-image {
+    opacity: 1;
+}
+
 @media (max-width: 640px) {
     .product {
         width: 100%;
